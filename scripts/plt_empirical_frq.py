@@ -35,7 +35,6 @@ INPUT FILES
         for hemizygous regions.
         Missing / non-variant genotypes are silently dropped per SNP.
 
-        Example:  TWB2_after2013_72635_FDRcandi_168.vcf
 
 --trait Comma-separated (CSV) trait table, one row per individual.
         Required columns
@@ -49,7 +48,6 @@ INPUT FILES
           PC1–PC10  — the first 10 principal components
         All other columns are ignored.
 
-        Example:  TWB2_after2013_72635_traitPC.csv
 
 --reg-tbl  (optional) Comma-separated regression-output table.
         Used to annotate each subplot with an empirical p-value and, when
@@ -61,25 +59,13 @@ INPUT FILES
         Optional column
           gene      — nearest gene(s); semicolon-separated; "intergenic" → rsID only
 
-        Example:  TWB2_after2013all_72635_168candi_RegOut_dbSNPanno_updated.csv
 
 --snps  One or more rsIDs to plot (space-separated on the command line).
         Only VCF records whose ID field matches an entry in this list are
         processed; all others are skipped.
 
-EXAMPLES
+EXAMPLE
 --------
-    # Single SNP, predicted frequencies overlaid, regression p-value annotated
-    plt_empirical_frq.py \\
-        --vcf   TWB2_after2013_72635_FDRcandi_168.vcf \\
-        --trait TWB2_after2013_72635_traitPC.csv \\
-        --snps  rs34401996 \\
-        --predict \\
-        --reg-tbl TWB2_after2013all_72635_168candi_RegOut_dbSNPanno_updated.csv \\
-        --n-col 1 --n-row 1 \\
-        --xylab \\
-        --output fig1B_rs34401996.pdf
-
     # Six SNPs arranged in a 2×3 grid, no prediction, plain blue
     plt_empirical_frq.py \\
         --vcf   variants.vcf \\
@@ -95,23 +81,15 @@ import numpy as np
 import math
 import scipy
 import matplotlib.pyplot as plt
-import scipy
 import statsmodels.formula.api as smf
 
 import contextlib
 import sys
 import os
 
-# Tell Matplotlib to use the custom fontset
 plt.rcParams['mathtext.fontset'] = 'custom'
-
-# 1. Make math variables (letters) italic
 plt.rcParams['mathtext.it'] = 'DejaVu Sans:italic'
-
-# 2. THE NEW TRICK: Force math numbers to be italic too!
-plt.rcParams['mathtext.rm'] = 'DejaVu Sans:italic' 
-
-# 3. Mute the cursive warning
+plt.rcParams['mathtext.rm'] = 'DejaVu Sans:italic'
 plt.rcParams['font.cursive'] = ['DejaVu Sans']
 
     
@@ -136,7 +114,7 @@ def get_freq_se_list(vcf, trait_tbl, age_grp_col, out_list, predict, select_list
             elif line.startswith("#CHROM"):
                 head = line.strip().split('\t')
             else:
-                snp_i_vcf = line.strip().split('\t')    # chr pos id ref alt ind1 ind2...
+                snp_i_vcf = line.strip().split('\t')
                 snpID = 'chr' + str(snp_i_vcf[0]) + '_' + str(snp_i_vcf[1])
                 rsID = snp_i_vcf[2]
                 if rsID not in select_list:
@@ -171,11 +149,11 @@ def get_freq_se_list(vcf, trait_tbl, age_grp_col, out_list, predict, select_list
                 condition = df_f_mrg['geno_binom'] == 1
                 tmp2 = df_f_mrg[condition]
                 tmp2_1 = copy.deepcopy(tmp2)
-                tmp2_1.loc[tmp2_1['geno_binom'] == 1, 'geno_binom'] = 0 # tmp2_1['geno_binom'] = 0
+                tmp2_1.loc[tmp2_1['geno_binom'] == 1, 'geno_binom'] = 0 
 
                 condition = df_f_mrg['geno_binom'] == 2
                 tmp3 = df_f_mrg[condition]
-                tmp3.loc[tmp3['geno_binom'] == 2, 'geno_binom'] = 1 # tmp3['geno_binom'] = 1
+                tmp3.loc[tmp3['geno_binom'] == 2, 'geno_binom'] = 1 
                 frames = [tmp1, tmp1, tmp2, tmp2_1, tmp3, tmp3]
                 
 
@@ -203,7 +181,6 @@ def get_freq_se_list(vcf, trait_tbl, age_grp_col, out_list, predict, select_list
                     n_allele.append(n)
                     p = n/total_hap
                     freq.append(p)
-                    # # s = 1.96*(math.sqrt(p*(1-p)/len(temp)))
                     s = math.sqrt(p*(1-p)/len(temp))
                     se.append(s)
 
@@ -370,7 +347,6 @@ def find_trend(vcf, trait_tbl, age_grp_col):
 
     up = []
     down = []
-    # U = []
 
     with(open(vcf, 'r')) as file:
         for line in file:
@@ -379,11 +355,9 @@ def find_trend(vcf, trait_tbl, age_grp_col):
             elif line.startswith("#CHROM"):
                 head = line.strip().split('\t')
             else:
-                snp_i_vcf = line.strip().split('\t')    # chr pos id ref alt ind1 ind2...
+                snp_i_vcf = line.strip().split('\t')
                 snpID = 'chr' + str(snp_i_vcf[0]) + '_' + str(snp_i_vcf[1])
                 rsID = snp_i_vcf[2]
-                # if rsID not in select_list:
-                #     continue
 
 
                 df = pd.DataFrame({
@@ -414,11 +388,11 @@ def find_trend(vcf, trait_tbl, age_grp_col):
                 condition = df_f_mrg['geno_binom'] == 1
                 tmp2 = df_f_mrg[condition]
                 tmp2_1 = copy.deepcopy(tmp2)
-                tmp2_1.loc[tmp2_1['geno_binom'] == 1, 'geno_binom'] = 0 # tmp2_1['geno_binom'] = 0
+                tmp2_1.loc[tmp2_1['geno_binom'] == 1, 'geno_binom'] = 0 
 
                 condition = df_f_mrg['geno_binom'] == 2
                 tmp3 = df_f_mrg[condition]
-                tmp3.loc[tmp3['geno_binom'] == 2, 'geno_binom'] = 1 # tmp3['geno_binom'] = 1
+                tmp3.loc[tmp3['geno_binom'] == 2, 'geno_binom'] = 1 
                 frames = [tmp1, tmp1, tmp2, tmp2_1, tmp3, tmp3]
                 
 
@@ -434,27 +408,15 @@ def find_trend(vcf, trait_tbl, age_grp_col):
 
                 grp_list = list(set(df1[age_grp]))
                 first_grp = df1[df1[age_grp] == grp_list[0]]
-                # mid_grp_1 = df1[df1[age_grp] == grp_list[len(grp_list)//2-1]]
-                # mid_grp_2 = df1[df1[age_grp] == grp_list[len(grp_list)//2]]
                 last_grp = df1[df1[age_grp] == grp_list[-1]]
 
                 first_grp_frq = sum(first_grp['geno_binom'])/len(first_grp)
-                # mid_grp_frq = (sum(mid_grp_1['geno_binom'])/len(mid_grp_1) + sum(mid_grp_2['geno_binom'])/len(mid_grp_2))/2
                 last_grp_frq = sum(last_grp['geno_binom'])/len(last_grp)
 
-                # if (max(first_grp_frq, mid_grp_frq, last_grp_frq) == mid_grp_frq) or (min(first_grp_frq, mid_grp_frq, last_grp_frq) == mid_grp_frq):
-                # #     U.append(snpID)
-                # else:
-                #     if first_grp_frq > last_grp_frq:
-                #         down.append(snpID)
-                #     else:
-                #         up.append(snpID)
                 if first_grp_frq > last_grp_frq:
                     down.append(rsID)
                 else:
                     up.append(rsID)
-
-
 
     trend_list = [down, up]
     return trend_list
@@ -462,10 +424,6 @@ def find_trend(vcf, trait_tbl, age_grp_col):
 
 
 def plot_freq_two(list_1, list_2, n_col, n_row, predict=False, reg_tbl_1=None, reg_tbl_2=None, height_times=2.5, width_times=2.8, col_1=None, col_2=None, SE=1, filename=False):
-    if col_1 is None:
-        col_1 = ['steelblue', 'cadetblue']
-    if col_2 is None:
-        col_2 = ['firebrick', 'rosybrown']
     """
     data_list: the list output by 'get_freq_se_list' function
     n_col: number of columns
@@ -475,6 +433,10 @@ def plot_freq_two(list_1, list_2, n_col, n_row, predict=False, reg_tbl_1=None, r
     height_times: height scale (float)
     width_times: width scale (float)
     """
+    if col_1 is None:
+        col_1 = ['steelblue', 'cadetblue']
+    if col_2 is None:
+        col_2 = ['firebrick', 'rosybrown']
     n = 0
     m = 0
     column_num = n_col
@@ -505,13 +467,9 @@ def plot_freq_two(list_1, list_2, n_col, n_row, predict=False, reg_tbl_1=None, r
             axes[n][m].set_title(rsID)
         else:
             snp_info_1 = reg_tbl_1[reg_tbl_1['ID'] == rsID]
-            # pval_1 = snp_info_1['pval'].iloc[0,]
-            # empirical_p_1 = str(format(pval_1, '.1E'))
 
             if reg_tbl_2 != None:
                 snp_info_2 = reg_tbl_2[reg_tbl_2['ID'] == rsID]
-                # pval_2 = snp_info_2['pval'].iloc[0,]
-                # empirical_p_2 = str(format(pval_2, '.1E'))
 
             if 'gene' in snp_info_1.columns:
                 gene = snp_info_1['gene'].iloc[0,]
