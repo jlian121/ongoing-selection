@@ -1,0 +1,200 @@
+PC1
+               df    sum_sq   mean_sq          F         PR(>F)
+AGE_grp       7.0  0.012846  0.001835  135.01502  1.777211e-198
+Residual  72627.0  0.987154  0.000014        NaN            NaN 
+
+PC2
+               df    sum_sq   mean_sq         F    PR(>F)
+AGE_grp       7.0  0.000031  0.000004  0.322472  0.944236
+Residual  72627.0  0.999969  0.000014       NaN       NaN 
+
+PC3
+               df    sum_sq   mean_sq          F        PR(>F)
+AGE_grp       7.0  0.004632  0.000662  48.281855  6.758221e-69
+Residual  72627.0  0.995368  0.000014        NaN           NaN 
+
+PC4
+               df    sum_sq   mean_sq          F        PR(>F)
+AGE_grp       7.0  0.001982  0.000283  20.605449  7.025816e-28
+Residual  72627.0  0.998018  0.000014        NaN           NaN 
+
+PC5
+               df    sum_sq   mean_sq          F        PR(>F)
+AGE_grp       7.0  0.002743  0.000392  28.539702  1.457189e-39
+Residual  72627.0  0.997257  0.000014        NaN           NaN 
+
+PC6
+               df    sum_sq   mean_sq        F    PR(>F)
+AGE_grp       7.0  0.000533  0.000076  5.52867  0.000002
+Residual  72627.0  0.999467  0.000014      NaN       NaN 
+
+PC7
+               df    sum_sq   mean_sq         F    PR(>F)
+AGE_grp       7.0  0.000064  0.000009  0.666417  0.700777
+Residual  72627.0  0.999936  0.000014       NaN       NaN 
+
+PC8
+               df    sum_sq   mean_sq         F    PR(>F)
+AGE_grp       7.0  0.000173  0.000025  1.796279  0.083213
+Residual  72627.0  0.999827  0.000014       NaN       NaN 
+
+PC9
+               df    sum_sq   mean_sq         F    PR(>F)
+AGE_grp       7.0  0.000161  0.000023  1.665557  0.112368
+Residual  72627.0  0.999839  0.000014       NaN       NaN 
+
+PC10
+               df   sum_sq   mean_sq         F    PR(>F)
+AGE_grp       7.0  0.00002  0.000003  0.207894  0.983817
+Residual  72627.0  0.99998  0.000014       NaN       NaN 
+
+PC11
+               df    sum_sq   mean_sq        F    PR(>F)
+AGE_grp       7.0  0.000047  0.000007  0.48902  0.843294
+Residual  72627.0  0.999953  0.000014      NaN       NaN 
+
+PC12
+               df   sum_sq   mean_sq         F    PR(>F)
+AGE_grp       7.0  0.00006  0.000009  0.619259  0.740504
+Residual  72627.0  0.99994  0.000014       NaN       NaN 
+
+PC13
+               df    sum_sq   mean_sq         F    PR(>F)
+AGE_grp       7.0  0.000159  0.000023  1.653605  0.115441
+Residual  72627.0  0.999841  0.000014       NaN       NaN 
+
+PC14
+               df    sum_sq   mean_sq         F    PR(>F)
+AGE_grp       7.0  0.000096  0.000014  0.993877  0.433366
+Residual  72627.0  0.999904  0.000014       NaN       NaN 
+
+PC15
+               df    sum_sq   mean_sq         F    PR(>F)
+AGE_grp       7.0  0.000067  0.000010  0.699859  0.672285
+Residual  72627.0  0.999933  0.000014       NaN       NaN 
+
+PC16
+               df    sum_sq   mean_sq         F   PR(>F)
+AGE_grp       7.0  0.000092  0.000013  0.959237  0.45919
+Residual  72627.0  0.999908  0.000014       NaN      NaN 
+
+PC17
+               df    sum_sq   mean_sq        F    PR(>F)
+AGE_grp       7.0  0.000155  0.000022  1.60463  0.128817
+Residual  72627.0  0.999845  0.000014      NaN       NaN 
+
+PC18
+               df    sum_sq   mean_sq         F    PR(>F)
+AGE_grp       7.0  0.000035  0.000005  0.364243  0.923305
+Residual  72627.0  0.999965  0.000014       NaN       NaN 
+
+PC19
+               df    sum_sq   mean_sq         F    PR(>F)
+AGE_grp       7.0  0.000138  0.000020  1.427064  0.189192
+Residual  72627.0  0.999862  0.000014       NaN       NaN 
+
+PC20
+               df    sum_sq   mean_sq        F    PR(>F)
+AGE_grp       7.0  0.000047  0.000007  0.49195  0.841154
+Residual  72627.0  0.999953  0.000014      NaN       NaN 
+
+PC1
+               df    sum_sq   mean_sq          F         PR(>F)
+AGE_grp       7.0  0.012846  0.001835  135.01502  1.777211e-198
+Residual  72627.0  0.987154  0.000014        NaN            NaN 
+
+PC2
+               df    sum_sq   mean_sq         F    PR(>F)
+AGE_grp       7.0  0.000031  0.000004  0.322472  0.944236
+Residual  72627.0  0.999969  0.000014       NaN       NaN 
+
+PC3
+               df    sum_sq   mean_sq          F        PR(>F)
+AGE_grp       7.0  0.004632  0.000662  48.281855  6.758221e-69
+Residual  72627.0  0.995368  0.000014        NaN           NaN 
+
+PC4
+               df    sum_sq   mean_sq          F        PR(>F)
+AGE_grp       7.0  0.001982  0.000283  20.605449  7.025816e-28
+Residual  72627.0  0.998018  0.000014        NaN           NaN 
+
+PC5
+               df    sum_sq   mean_sq          F        PR(>F)
+AGE_grp       7.0  0.002743  0.000392  28.539702  1.457189e-39
+Residual  72627.0  0.997257  0.000014        NaN           NaN 
+
+PC6
+               df    sum_sq   mean_sq        F    PR(>F)
+AGE_grp       7.0  0.000533  0.000076  5.52867  0.000002
+Residual  72627.0  0.999467  0.000014      NaN       NaN 
+
+PC7
+               df    sum_sq   mean_sq         F    PR(>F)
+AGE_grp       7.0  0.000064  0.000009  0.666417  0.700777
+Residual  72627.0  0.999936  0.000014       NaN       NaN 
+
+PC8
+               df    sum_sq   mean_sq         F    PR(>F)
+AGE_grp       7.0  0.000173  0.000025  1.796279  0.083213
+Residual  72627.0  0.999827  0.000014       NaN       NaN 
+
+PC9
+               df    sum_sq   mean_sq         F    PR(>F)
+AGE_grp       7.0  0.000161  0.000023  1.665557  0.112368
+Residual  72627.0  0.999839  0.000014       NaN       NaN 
+
+PC10
+               df   sum_sq   mean_sq         F    PR(>F)
+AGE_grp       7.0  0.00002  0.000003  0.207894  0.983817
+Residual  72627.0  0.99998  0.000014       NaN       NaN 
+
+PC11
+               df    sum_sq   mean_sq        F    PR(>F)
+AGE_grp       7.0  0.000047  0.000007  0.48902  0.843294
+Residual  72627.0  0.999953  0.000014      NaN       NaN 
+
+PC12
+               df   sum_sq   mean_sq         F    PR(>F)
+AGE_grp       7.0  0.00006  0.000009  0.619259  0.740504
+Residual  72627.0  0.99994  0.000014       NaN       NaN 
+
+PC13
+               df    sum_sq   mean_sq         F    PR(>F)
+AGE_grp       7.0  0.000159  0.000023  1.653605  0.115441
+Residual  72627.0  0.999841  0.000014       NaN       NaN 
+
+PC14
+               df    sum_sq   mean_sq         F    PR(>F)
+AGE_grp       7.0  0.000096  0.000014  0.993877  0.433366
+Residual  72627.0  0.999904  0.000014       NaN       NaN 
+
+PC15
+               df    sum_sq   mean_sq         F    PR(>F)
+AGE_grp       7.0  0.000067  0.000010  0.699859  0.672285
+Residual  72627.0  0.999933  0.000014       NaN       NaN 
+
+PC16
+               df    sum_sq   mean_sq         F   PR(>F)
+AGE_grp       7.0  0.000092  0.000013  0.959237  0.45919
+Residual  72627.0  0.999908  0.000014       NaN      NaN 
+
+PC17
+               df    sum_sq   mean_sq        F    PR(>F)
+AGE_grp       7.0  0.000155  0.000022  1.60463  0.128817
+Residual  72627.0  0.999845  0.000014      NaN       NaN 
+
+PC18
+               df    sum_sq   mean_sq         F    PR(>F)
+AGE_grp       7.0  0.000035  0.000005  0.364243  0.923305
+Residual  72627.0  0.999965  0.000014       NaN       NaN 
+
+PC19
+               df    sum_sq   mean_sq         F    PR(>F)
+AGE_grp       7.0  0.000138  0.000020  1.427064  0.189192
+Residual  72627.0  0.999862  0.000014       NaN       NaN 
+
+PC20
+               df    sum_sq   mean_sq        F    PR(>F)
+AGE_grp       7.0  0.000047  0.000007  0.49195  0.841154
+Residual  72627.0  0.999953  0.000014      NaN       NaN 
+
