@@ -2,7 +2,8 @@
 
 [![DOI](https://img.shields.io/badge/DOI-10.1016%2Fj.ajhg.2026.07.002-blue)](https://doi.org/10.1016/j.ajhg.2026.07.002)
 [![Journal](https://img.shields.io/badge/Journal-AJHG-orange)](https://www.cell.com/ajhg/home)
-[![License: CC BY-NC-ND 4.0](https://img.shields.io/badge/License-CC%20BY--NC--ND%204.0-lightgrey)](http://creativecommons.org/licenses/by-nc-nd/4.0/)
+[![License: MIT](https://img.shields.io/badge/Code-MIT-yellow)](https://opensource.org/licenses/MIT)
+[![License: CC BY-NC-ND 4.0](https://img.shields.io/badge/Paper-CC%20BY--NC--ND%204.0-lightgrey)](http://creativecommons.org/licenses/by-nc-nd/4.0/)
 
 This repository contains summary statistics and custom analysis code for:
 
